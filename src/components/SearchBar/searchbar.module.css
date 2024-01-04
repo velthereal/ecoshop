@@ -28,3 +28,24 @@ input::placeholder {
 input:focus-visible {
 	outline: none;
 }
+
+@media screen and (max-width: 376px) {
+	.serach-bar {
+		width: 296px;
+		height: 32px;
+		padding: 8px 0;
+		display: flex;
+		align-items: center;
+		position: relative;
+	}
+	input {
+		padding-left: 36px;
+	}
+	input::placeholder {
+		font-size: 12px;
+	}
+	.search {
+		left: 16px;
+		width: 16px;
+	}
+}

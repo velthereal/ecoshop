@@ -1,4 +1,4 @@
-// import styles from './navigation.css';
+// import styles from './navigation.module.css';
 
 import NavigationBar from '../NavigationBar';
 import MenuBar from '../MenuBar';

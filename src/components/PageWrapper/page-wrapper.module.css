@@ -2,3 +2,9 @@
 	margin: 0 auto;
 	padding: 0 60px;
 }
+
+@media screen and (max-width: 376px) {
+	.common {
+		padding: 0 16px 0 15px;
+	}
+}
