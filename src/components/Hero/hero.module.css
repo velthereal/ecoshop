@@ -19,7 +19,7 @@ h1 {
 	font-size: 56px;
 	font-weight: 700;
 }
-p {
+.hero p {
 	color: #666;
 	text-align: center;
 	font-family: Inter;
@@ -75,7 +75,7 @@ p {
 	h1 {
 		font-size: 40px;
 	}
-	p {
+	.hero p {
 		font-size: 14px;
 		line-height: 20px;
 	}

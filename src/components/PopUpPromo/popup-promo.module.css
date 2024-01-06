@@ -45,7 +45,7 @@ h5 {
 	font-weight: 700;
 	margin: 0;
 }
-p {
+.popup-text p {
 	color: #333;
 	font-family: Inter;
 	font-size: 20px;
@@ -147,7 +147,7 @@ p {
 		font-size: 20px;
 		font-weight: 400;
 	}
-	p {
+	.popup-text p {
 		font-size: 14px;
 		line-height: 20px;
 	}
