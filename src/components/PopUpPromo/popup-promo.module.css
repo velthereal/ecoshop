@@ -1,0 +1,149 @@
+.hidden {
+	display: none;
+}
+.bg {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, .5);
+	z-index: 20;
+	transition: 2s;
+}
+
+.popup-promo {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	width: 872px;
+	border-radius: 16px;
+	background: #FFF;
+	padding-right: 24px;
+}
+.popUpImg {
+	border-radius: 16px 0 0 16px;
+}
+
+.popup-text {
+	display: flex; 
+	flex-direction: column;
+	align-items: center;
+}
+h5 {
+	color: #333;
+	font-family: Libre Baskerville;
+	font-size: 24px;
+	font-weight: 700;
+	margin: 0;
+}
+p {
+	color: #333;
+	font-family: Inter;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 28px;
+	margin: 16px;
+	text-align: center;
+}
+.shopNowBtn {
+	position: relative;
+	z-index: 40;
+	color: #658C4A;
+	text-align: center;
+	font-family: Inter;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 28px;
+
+	background-color: transparent;
+	border: none;
+	width: 147px;
+	height: 52px;
+
+	cursor: pointer;
+}
+.shopNowBtn::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	display: block;
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	background: #E7CEC0;
+	transition: .5s;
+}
+.shopNowBtn:hover::before {
+	width: 147px;
+	height: 52px;
+}
+.close {
+	position: absolute;
+	width: 24px;
+	top: 16px;
+	right: 16px;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 376px) {
+	.popUpImg {
+		display: none;
+	}
+	.popup-promo {
+		box-sizing: border-box;
+		position: relative;
+		width: 344px;
+		background: url(../../images/popup/popup.png);
+		background-position: center;
+		padding: 24px 15px 24px 16px;
+		z-index: 2;
+		border-radius: 8px;
+	}
+	.popup-promo::after {
+		content: "";
+		background: rgba(255, 255, 255, 0.9);
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 1;
+		border-radius: 8px;
+	}
+	.popup-text {
+		position: relative;
+		z-index: 50;
+	}
+	.close {
+		z-index: 50;
+		width: 16px;
+		top: 8px;
+		right: 8px;
+	}
+	.shopNowBtn {
+		font-size: 14px;
+		line-height: 20px;
+	
+		width: 117px;
+		height: 44px;
+	}
+	.shopNowBtn:hover::before {
+		width: 117px;
+		height: 44px;
+	}
+	h5 {
+		font-size: 20px;
+		font-weight: 400;
+	}
+	p {
+		font-size: 14px;
+		line-height: 20px;
+	}
+}

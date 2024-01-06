@@ -1,4 +1,8 @@
+.hidden {
+	display: none;
+}
 .menu {
+	display: block;
 	list-style-type: none;
 	padding: 8px 0;
 	margin: 0;
@@ -12,5 +16,8 @@
 	margin: 16px;
 }
 
-@media screen and (max-width: 376px) {
+@media screen and (min-width: 376px) {
+	.menu {
+		display: none;
+	}
 }
