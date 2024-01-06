@@ -1,0 +1,25 @@
+.categories {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	align-items: center;
+	margin: 80px auto;
+	grid-gap: 24px;
+}
+h3 {
+	color: #658C4A;
+	font-family: Libre Baskerville;
+	font-size: 40px;
+	font-weight: 700;
+}
+@media screen and (max-width: 376px) {
+	.categories {
+		padding: 0 16px 0 15px;
+		grid-template-columns: 1fr;
+		align-items: center;
+		margin: 24px auto;
+		grid-gap: 16px;
+	}
+	h3 {
+		display: none;
+	}
+}

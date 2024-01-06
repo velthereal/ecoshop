@@ -1,0 +1,54 @@
+.card {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	border-radius: 8px;
+	background-color: #658C4A;
+}
+.clothing {
+	background: url(../../images/categories/clothing.png);
+}
+.home_goods {
+	background: url(../../images/categories/homegoods.png);
+}
+.bedding {
+	background: url(../../images/categories/bedding.png);
+}
+.furniture {
+	background: url(../../images/categories/furniture.png);
+}
+.accesories {
+
+	background: url(../../images/categories/accesories.png);
+}
+.categoryBtn {
+	position: absolute;
+	left: 24px;
+	bottom: 24px;
+	color: #FFF;
+	text-align: center;
+	font-family: Inter;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 20px;
+
+	padding: 8px 16px;
+	border-radius: 40px;
+	background: #333;
+	border: none;
+	transition: .5s;
+	cursor: pointer;
+}
+.categoryBtn:hover {
+	background: #658C4A;
+}
+
+@media screen and (max-width: 376px) {
+	.card {
+		width: 344px;
+		height: 240px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}
