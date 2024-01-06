@@ -8,14 +8,18 @@ import Button from '../Button';
 import { useState, useEffect } from 'react';
 
 const PopUpPromo = () => {
-	const [isShow, setIsShow] = useState(true);
+	const [isOpened, setIsOpened] = useState(false);
+
+	useEffect(() => {
+        setTimeout(() => setIsOpened(true), 2000)
+    }, [])
 
 	const onCloseHandler = () => {
-		setIsShow(false);
+		setIsOpened(false);
 	}
 
 	return (
-			<div className={isShow ? styles.bg : styles.hidden}>
+			<div className={isOpened ? styles.bg : styles.hidden}>
 				<div className={styles['popup-promo']}>
 					<img onClick={() => onCloseHandler()} className={styles.close} src={close} alt="" />
 					<img className={styles.popUpImg} src={popUp_img} alt="" />

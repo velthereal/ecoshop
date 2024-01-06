@@ -9,13 +9,19 @@
 	width: 100%;
 }
 .menu li {
-	margin: 8px 16px;
 	color: #333;
 	font-family: Inter;
 	font-size: 16px;
 	font-weight: 600;
 	line-height: 24px;
 	cursor: pointer;
+	transition: .5s;
+	padding: 8px 16px;
+	margin: 0 8px;
+}
+.menu li:hover {
+	background-color: #658C4A;
+	color: #fff;
 }
 
 @media screen and (max-width: 376px) {

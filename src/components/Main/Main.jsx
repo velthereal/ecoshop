@@ -1,8 +1,10 @@
 import styles from './main.module.css';
 
+import Hero from '../Hero';
+
 const Main = () => {
 	return (
-		<div></div>
+		<Hero />
 	)
 }
 
