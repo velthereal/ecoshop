@@ -1,10 +1,12 @@
 .menu {
 	list-style-type: none;
-	padding: 0;
-	margin: 16px 120px;
+	padding: 16px 0;
+	margin: 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	border-bottom: 1px solid #658C4A;
+	width: 100%;
 }
 .menu li {
 	margin: 8px 16px;

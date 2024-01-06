@@ -1,10 +1,17 @@
-// import styles from './burgermenu.module.css';
-
-import Logo from '../Logo';
+import styles from './burgermenu.module.css';
 
 const BurgerMenu = () => {
 	return (
-		<Logo />
+		<ul className={styles.menu}>
+			<li>NEW!</li>
+			<li>Clothing</li>
+			<li>Bath</li>
+			<li>Bedding</li>
+			<li>Home Goods</li>
+			<li>Furniture</li>
+			<li>Footwear</li>
+			<li>Accesories</li>
+		</ul>
 	)
 }
 

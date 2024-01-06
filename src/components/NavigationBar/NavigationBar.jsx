@@ -2,7 +2,6 @@ import styles from './navigationbar.module.css';
 
 import SerachBar from '../SearchBar';
 import PageWrapper from '../PageWrapper';
-import BurgerMenu from '../BurgerMenu';
 import Logo from '../Logo';
 
 import logo from '../../images/logo/Logo.png';
@@ -21,7 +20,6 @@ const NavigationBar = () => {
 					<img src={bag} alt="Shopping icon" />
 				</div>
 				<img className={styles.burgerMenu} src={burgerMenu} alt="" />
-				<BurgerMenu />
 			</div>
 		</PageWrapper>
 	)

@@ -5,6 +5,6 @@
 
 @media screen and (max-width: 376px) {
 	.common {
-		padding: 0 16px 0 15px;
+		padding: 0; 
 	}
 }

@@ -25,6 +25,8 @@
 		display: grid;
 		grid-template-columns: 2fr 1fr;
 		padding: 12px 0;
+		width: 101%;
+		border-bottom: 1px solid #658C4A;
 	}
 	.burgerMenu {
 		display: block;
