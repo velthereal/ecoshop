@@ -1,0 +1,40 @@
+.cardWhy {
+	width: 280px;
+}
+.cardWhy img {
+	width: 60px;
+	filter: brightness(3);
+}
+.cardWhy p:first-of-type {
+	color: #333;
+	font-family: Inter;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 28px;
+	margin: 16px 0 4px 0;
+}
+.cardWhy p:last-of-type {
+	color: #666;
+	font-family: Inter;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 28px;
+	margin: 0;
+}
+@media screen and (max-width: 376px) {
+	.cardWhy {
+		width: 164px;
+	}
+	.cardWhy img {
+		width: 32px;
+	}
+	.cardWhy p:first-of-type {
+		margin: 8px 0 4px 0;
+		font-size: 14px;
+		line-height: 20px;
+	}
+	.cardWhy p:last-of-type {
+		font-size: 14px;
+		line-height: 20px;
+	}
+}

@@ -1,0 +1,58 @@
+.whyUs {
+	padding: 160px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.whyUs h2 {
+	color:  #658C4A;
+	text-align: center;
+	font-family: Libre Baskerville;
+	font-size: 48px;
+	font-weight: 700;
+	position: relative;
+	margin: 0 0 40px 0;
+}
+.whyUs h2::after {
+	content: '';
+	position: absolute;
+	top: -15px;
+	left: -70px;
+	display: block;
+	width: 161px;
+	height: 56px;
+	border-radius: 40px;
+	background: #E7CEC0;
+	transform: rotate(-15deg);
+	z-index: -1;
+}
+.cardWhy-list {
+	padding: 0 64px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 24px;
+}
+
+@media screen and (max-width: 376px) {
+	.whyUs {
+		padding: 80px 15px 80px 16px;
+	}
+	.whyUs h2 {
+		color: #333;
+		font-size: 20px;
+		font-weight: 400;
+		margin: 0 0 24px 0;
+	}
+	.whyUs h2::after {
+		content: '';
+		top: -5px;
+		left: -25px;
+		width: 64px;
+		height: 22px;
+	}
+	.cardWhy-list {
+		padding: 0;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 24px 16px;
+	}
+}
