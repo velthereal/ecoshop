@@ -1,0 +1,85 @@
+.existSection {
+	background: #658C4A;
+	height: 310px;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+.existSection h3 {
+	color: #658C4A;
+	font-family: Libre Baskerville;
+	font-size: 40px;
+	font-weight: 700;
+	padding: 80px 0px 80px 120px;
+	background: #E7CEC0;
+	width: 260px;
+	display: flex;
+	justify-content: flex-end;
+	margin: 0;
+	box-sizing: border-box;
+}
+.dots {
+	width: 112px;
+	bottom: 0;
+	left: 310px;
+	position: absolute;
+}
+.vector1{
+	width: 314px;
+	position: absolute;
+	bottom: 0;
+	left: 700px;
+	z-index: 1;
+}
+.vector2 {
+	width: 314px;
+	position: absolute;
+	bottom: 15px;
+	left: 780px;
+	z-index: 1;
+}
+.vector3 {
+	position: absolute;
+	top: 0;
+	left: 490px;
+}
+.vector4{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+@media screen and (max-width: 376px) {
+	.existSection {
+		padding: 0 15px 0 16px;
+		height: 406px;
+		flex-direction: column;
+		align-items: baseline;
+	}
+	.existSection h3 {
+		padding: 40px 24px 40px 16px;
+		width: 202px;
+		height: 110px;
+		justify-content: center;
+		align-items: center;
+		font-size: 24px;
+		margin-bottom: 24px;
+	}
+	.dots {
+		top: 115px;
+		left: -20px;
+	}
+	.vector1{
+		display: none;
+	}
+	.vector2 {
+		display: none;
+	}
+	.vector3 {
+		top: 0;
+		left: 300px;
+	}
+	.vector4{
+		display: none;
+	}
+}

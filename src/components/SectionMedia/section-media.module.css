@@ -1,0 +1,27 @@
+.sectionMedia {
+	width: 952px;
+	height: 144px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	justify-items: center;
+	margin-left: 80px;
+	grid-gap: 24px;
+	position: relative;
+	z-index: 2;
+}
+.sectionMedia img {
+	width: 220px;
+}
+
+@media screen and (max-width: 376px) {
+	.sectionMedia {
+		width: 344px;
+		height: 232px;
+		grid-template-columns: repeat(2, 1fr);
+		margin-left: 0;
+		grid-gap: 24px 16px;
+	}
+	.sectionMedia img {
+		width: 146px;
+	}
+}
