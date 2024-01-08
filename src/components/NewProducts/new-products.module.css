@@ -1,0 +1,144 @@
+.new-products {
+	padding: 80px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.container {
+	width: 1320px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.new-products h3 {
+	color: #333;
+	font-family: Libre Baskerville;
+	font-size: 40px;
+	font-weight: 700;
+	margin: 0;
+}
+
+.new-products>p {
+	color: #666;
+	font-family: Inter;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	margin: 4px 0 40px 0;
+}
+.new-products-list {
+	margin: 0 auto;
+	width: 1320px;
+	overflow: hidden;
+	display: flex;
+	transition: tarnsform 0.5s ease;
+}
+.new-products-list div:not(:last-child) {
+	margin-right: 24px;
+}
+.new-products-list p:first-of-type {
+	color: #333;
+	font-family: Inter;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 28px;
+	margin: 8px 0;
+}
+
+.new-products-list p:nth-of-type(2){
+	color: #658C4A;
+	font-family: Inter;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 24px;
+}
+.arrows {
+	display: flex;
+	gap: 16px;
+}
+.arrows div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	background: #E7CEC0;
+	cursor: pointer;
+	transition: .3s;
+}
+.arrows div:hover {
+	background: #658C4A;
+}
+.arrows div:hover img {
+	filter: brightness(100);
+}
+.arrows img {
+	width: 24px;
+}
+.seeMoreBtn {
+	color: #FFF;
+	text-align: center;
+	font-family: Inter;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 28px;
+
+	padding: 12px 24px;
+	border-radius: 40px;
+	background: #658C4A;
+	border: none;
+	margin-top: 40px;
+	transition: .5s;
+	cursor: pointer;
+}
+.seeMoreBtn:hover {
+	background: #E7CEC0;
+	color: #658C4A;
+}
+
+.arrows .disabled {
+	background: #E6E6E6;
+	pointer-events: none;
+	cursor: not-allowed;
+}
+
+@media screen and (max-width: 376px) {
+	.new-products {
+		padding: 40px 15px 40px 16px;
+	}
+	.container {
+		width: 344px;
+	}
+	.new-products h3 {
+		font-size: 24px;
+	}
+	.new-products>p {
+		margin: 4px 0 24px 0;
+		font-size: 12px;
+		line-height: 16px;
+	}
+	.new-products-list {
+		width: 344px;
+	}
+	.new-products-list div:not(:last-child) {
+		margin-right: 16px;
+	}
+	.new-products-list p:first-of-type {
+		font-size: 14px;
+		line-height: 20px;
+	}
+	.new-products-list p:nth-of-type(2){
+		font-size: 12px;
+		line-height: 16px;
+	}
+	.arrows {
+		display: none;
+	}
+	.seeMoreBtn {
+		font-size: 14px;
+		font-style: normal;
+		line-height: 20px;
+	}
+}

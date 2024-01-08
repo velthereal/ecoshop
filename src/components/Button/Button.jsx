@@ -1,5 +1,3 @@
-import styles from './button.module.css';
-
 const Button = (props) => {
 	const { text, type, styleName, onClickFunction } = props;
 	return (

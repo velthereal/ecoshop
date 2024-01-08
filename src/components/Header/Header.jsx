@@ -1,5 +1,3 @@
-// import styles from'./header.css';
-
 import SaleBar from '../SaleBar';
 import Navigation from '../Navigation';
 

@@ -11,7 +11,7 @@
 	position: relative;
 	z-index: 200;
 }
-h1 {
+.hero h1 {
 	margin: 0;
 	color: #333;
 	text-align: center;
@@ -72,7 +72,7 @@ h1 {
 		left: 0;
 		z-index: 4;
 	}
-	h1 {
+	.hero h1 {
 		font-size: 40px;
 	}
 	.hero p {
