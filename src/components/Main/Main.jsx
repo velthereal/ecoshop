@@ -2,6 +2,7 @@ import Hero from '../Hero';
 import Categories from '../Categories';
 import Products from '../Products';
 import NewProducts from '../NewProducts';
+import Commitment from '../Commitment';
 
 const Main = () => {
 	return (
@@ -10,6 +11,7 @@ const Main = () => {
 			<Categories />
 			<Products />
 			<NewProducts />
+			<Commitment />
 		</>
 	)
 }
