@@ -8,6 +8,7 @@ footer {
 	width: 100%;
 	border-bottom: #333 1px solid;
 	padding-bottom: 24px;
+	margin-bottom: 24px;
 }
 .footer {
 	display: flex;
@@ -68,4 +69,68 @@ footer {
 	padding: 0;
 	margin: 0;
 	display: flex;
+	gap: 16px;
+}
+.bottom ul li {
+	cursor: pointer; 
+}
+.bottom p{
+	color: #333;
+	font-family: Inter;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+}
+
+@media screen and (max-width: 376px) {
+	footer {
+		height: 670px;
+		padding: 0 15px 20px 16px;
+	}
+	.forBorder {
+		padding-bottom: 16px;
+		margin-bottom: 16px;
+	}
+	.footer {
+		padding-top: 40px;
+	}
+	
+	.menuLists {
+		grid-template-columns: repeat(2, 164px);
+	}
+	
+	.menuLists li {
+		font-size: 12px;
+		line-height: 16px;
+	}
+	.menuLists li:not(:first-of-type):hover {
+		font-size: 14px;
+	}
+	.menuLists .firstLi {
+		margin-bottom: 8px;
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.payment {
+		grid-template-columns: repeat(4, 33px);
+		grid-template-rows: repeat(4, 24px);
+		grid-gap: 8px;
+	}
+	.payment img {
+		width: 33px;
+		height: 24px;
+	}
+	.bottom {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr;
+		justify-items: center;
+	}
+	.bottom ul {
+		grid-row-start: 1;
+	}
+	.bottom p{
+		font-size: 12px;
+		line-height: 16px;
+	}
 }

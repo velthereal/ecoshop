@@ -71,15 +71,17 @@ const Footer = () => {
 					</div>
 				</PageWrapper>
 			</div>
-			<div className="bottom">
-				<p>© 2023 Eco Shop Indonesia. All Rights Reserved.</p>
-				<ul>
-					<li><img src={social1} alt="" /></li>
-					<li><img src={social2} alt="" /></li>
-					<li><img src={social3} alt="" /></li>
-					<li><img src={social4} alt="" /></li>
-				</ul>
-			</div>
+			<PageWrapper>
+				<div className={styles.bottom}>
+					<p>© 2023 Eco Shop Indonesia. All Rights Reserved.</p>
+					<ul>
+						<li><img src={social1} alt="" /></li>
+						<li><img src={social2} alt="" /></li>
+						<li><img src={social3} alt="" /></li>
+						<li><img src={social4} alt="" /></li>
+					</ul>
+				</div>
+			</PageWrapper>
 		</footer>
 	)
 }
