@@ -43,6 +43,7 @@ const Products = () => {
 				<div className={styles['products-list']}>
 					{products.map((product, index) => (
 						<ProductCard
+							key={index}
 							imgSrc={product.imgSrc}
 							text={product.text}
 							priceNew={product.priceNew}
