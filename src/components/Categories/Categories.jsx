@@ -4,25 +4,38 @@ import CategoryCard from '../CategoryCard';
 import PageWrapper from '../PageWrapper';
 
 const Categories = () => {
+	const categories = [
+		{
+			name: 'Clothing',
+			className: 'clothing',
+		},
+		{
+			name: 'Home Goods',
+			className: 'home_goods',
+		},
+		{
+			name: 'Bedding',
+			className: 'bedding',
+		},
+		{
+			name: 'Furniture',
+			className: 'furniture',
+		},
+		{
+			name: 'Accesories',
+			className: 'accesories',
+		},
+	];
 	return (
 		<PageWrapper>
-			<div className={styles.categories}>
+			<div id='categories' className={styles.categories}>
 				<h3>Category <br /> for <br /> you</h3>
-				<CategoryCard
-					btnText='Clothing'
-					cardClassName='clothing' />
-				<CategoryCard
-					btnText='Home Goods'
-					cardClassName='home_goods' />
-				<CategoryCard
-					btnText='Bedding'
-					cardClassName='bedding' />
-				<CategoryCard
-					btnText='Furniture'
-					cardClassName='furniture' />
-				<CategoryCard
-					btnText='Accesories'
-					cardClassName='accesories' />
+				{categories.map((category, index) => (
+					<CategoryCard
+						key={index}
+						btnText={category.name}
+						cardClassName={category.className} />
+				))}
 			</div>
 		</PageWrapper>
 	)

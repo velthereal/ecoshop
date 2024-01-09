@@ -17,11 +17,7 @@ const Main = () => {
 	const [isClicked, setIsClicked] = useState(false);
 
 	const onClickCoupon = () => {
-		if(!isClicked){
-			setIsClicked(true);
-		} else {
-			setIsClicked(false);
-		}
+		setIsClicked(true);
 	}
 
 	return (

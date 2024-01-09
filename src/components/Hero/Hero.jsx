@@ -5,6 +5,14 @@ import Button from '../Button';
 import hero1 from '../../images/hero1.png';
 
 const Hero = () => {
+	const scrollToSection = () => {
+		const sectionElement = document.getElementById('categories');
+		if (sectionElement) {
+			if(window.innerWidth <= 376) {
+				sectionElement.scrollIntoView({ behavior: 'smooth' });
+			}
+		}
+	};
 	return (
 		<div className={styles.hero}>
 			<div className={styles['hero-text']}>
@@ -13,7 +21,8 @@ const Hero = () => {
 				<Button
 					text='Learn More'
 					type='button'
-					styleName={styles.leranMoreBtn} />
+					styleName={styles.leranMoreBtn}
+					onClickFunction={scrollToSection} />
 			</div>
 			<img src={hero1} alt="" />
 		</div>

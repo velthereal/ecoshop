@@ -1,3 +1,5 @@
+import './App.css';
+
 import PopUpPromo from "./components/PopUpPromo";
 import Header from "./components/Header";
 import Main from "./components/Main";
