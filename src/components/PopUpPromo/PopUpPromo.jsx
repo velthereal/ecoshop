@@ -11,7 +11,7 @@ const PopUpPromo = () => {
 	const [isOpened, setIsOpened] = useState(false);
 
 	useEffect(() => {
-        setTimeout(() => setIsOpened(true), 2000)
+        setTimeout(() => setIsOpened(true), 1500)
     }, [])
 
 	const onCloseHandler = () => {

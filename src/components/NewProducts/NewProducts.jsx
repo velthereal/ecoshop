@@ -62,67 +62,40 @@ const NewProducts = () => {
 		},
 	];
 
-	const isMobile = window.innerWidth <= 376;
-	const itemsPerPage = isMobile ? 2 : 4;
+	const itemsPerPage = 4;
+	const totalPages = Math.ceil(products.length / itemsPerPage);
 
-	const [firstVisibleIndex, setFirstVisibleIndex] = useState(0);
-	const dragStartX = useRef(0);
+	const [currentPage, setCurrentPage] = useState(1);
 
-	const handleArrowClick = (direction) => {
-		const increment = direction === 'right' ? 1 : -1;
-		const newIndex = firstVisibleIndex + increment;
+  	const nextSlide = () => {
+    	setCurrentPage((prevPage) => (prevPage % totalPages) + 1);
+  	};
 
-		if(newIndex >= 0 && newIndex <= products.length - itemsPerPage) {
-			setFirstVisibleIndex(newIndex);
-		}
-	}
-	const handleDragStart = (e) => {
-		dragStartX.current = isMobile ? e.touches[0].clientX : e.clientX;
-	}
-	const handleDragMove = (e) => {
-		if(dragStartX.current !== null){
-			const clientX = isMobile ? e.touches[0].clientX : e.clientX;
-			const dargDistance = clientX - dragStartX.current;
-			const itemsToMove = Math.floor(dargDistance / 100);
+  	const prevSlide = () => {
+    	setCurrentPage((prevPage) => (prevPage - 2 + totalPages) % totalPages + 1);
+  	};
 
-			const newIndex = Math.min(
-				Math.max(firstVisibleIndex - itemsToMove, 0),
-				products.length - itemsPerPage
-			);
-			setFirstVisibleIndex(newIndex);
-			dragStartX.current = clientX;
-		}
-	}
-	const handleDragEnd = () => {
-		dragStartX.current = null;
-	}
-	const eventProps = isMobile 
-		? {
-			onTouchStart: handleDragStart,
-			onTouchMove: handleDragMove,
-			onTouchEnd: handleDragEnd,
-			onTouchCancel: handleDragEnd,
-		} : {
-			onMouseDown: handleDragStart,
-			onMouseMove: handleDragMove,
-			onMouseUp: handleDragEnd,
-			onMouseLeave: handleDragEnd,
-		}
+  	const startIndex = (currentPage - 1) * itemsPerPage;
+  	const endIndex = startIndex + itemsPerPage;
+
+	const isPrevDisabled = currentPage === 1;
+	const isNextDisabled = endIndex >= products.length;
+
 	return (
 		<PageWrapper>
-			<div {...eventProps} className={styles['new-products']}>
+			<div className={styles['new-products']}>
 				<div className={styles.container}>
 					<div>
 						<h3>New Arrival</h3>
 						<p>Be the first to have the first-class product</p>
 					</div>
 					<div className={styles.arrows}>
-						<div onClick={() => handleArrowClick('left')} className={firstVisibleIndex === 0 ? styles.disabled : ''}><img src={arrow_left} alt="" /></div>
-						<div onClick={() => handleArrowClick('right')} className={firstVisibleIndex === 0 ? styles.disabled : ''}><img src={arrow_right} alt="" /></div>
+						<div onClick={prevSlide} className={isPrevDisabled ? styles.disabled : ''}><img src={arrow_left} alt="" /></div>
+						<div onClick={nextSlide} className={isNextDisabled ? styles.disabled : ''}><img src={arrow_right} alt="" /></div>
 					</div>
 				</div>
 				<div className={styles['new-products-list']}>
-					{products.slice(firstVisibleIndex, firstVisibleIndex + itemsPerPage).map((product, index) => (
+					{products.slice(startIndex, endIndex).map((product, index) => (
 						<ProductCard
 							key={index}
 							imgSrc={product.imgSrc}
