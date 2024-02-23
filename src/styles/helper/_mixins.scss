@@ -1,44 +1,4 @@
-/* // --------COLORS---------
-// BRAND
-$primary-color: #658c4a;
-$secondary-color: #e7cec0;
-// BASIC
-$white-color: #ffffff;
-$black-color: #000000;
-$info-color: #0065ff;
-$success-color: #36B37E;
-$warning-color: #ffab00;
-$error-color: #ff5630;
-// GREY
-$grey50: #f5f5f5;
-$grey100: #e6e6e6;
-$grey200: #cccccc;
-$grey300: #b3b3b3;
-$grey400: #999999;
-$grey500: #666666;
-$grey600: #333333;
-$grey700: #262626;
-$grey800: #191919;
-$grey900: #0d0d0d;
-// -----------------------
-
-// HEADING
-$heading-line-height: auto;
-$heading-font: 'Libre Baskerville Regular', serif;
-
-// BODY
-$text-font: 'Inter', sans-serif;
-$text-large-lh: 28px;
-$text-normal-lh: 24px;
-$text-small-lh: 20px;
-$text-xtra-small-lh: 16px;
-$text-2xtra-small-lh: 14px;
-
-$text-large-size: 20px;
-$text-normal-size: 16px;
-$text-small-size: 14px;
-$text-xtra-small-size: 12px;
-$text-2xtra-small-size: 10px;
+@import './text';
 
 @mixin text-large-regular {
 	line-height: $text-large-lh;
@@ -89,9 +49,8 @@ $text-2xtra-small-size: 10px;
 	line-height: $text-2xtra-small-lh;
 	font-family: $text-font;
 	font-size: $text-2xtra-small-size ;
-} */
-
-/* // HEADING
+}
+// HEADING
 @mixin heading1 {
 	font-size: 56px;
 	line-height: $heading-line-height;
@@ -117,6 +76,3 @@ $text-2xtra-small-size: 10px;
 	line-height: $heading-line-height;
 	font-weight: 400;
 }
-h2 {
-	@include heading1;
-} */

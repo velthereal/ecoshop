@@ -1,9 +1,9 @@
-import styles from './burgermenu.module.css';
+import './burgermenu.scss';
 
 const BurgerMenu = (props) => {
 	const { isShow } = props;
 	return (
-		<ul className={isShow ? styles.menu : styles.hidden}>
+		<ul className={isShow ? 'menu' : 'hidden'}>
 			<li>NEW!</li>
 			<li>Clothing</li>
 			<li>Bath</li>
